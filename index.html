@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gracias por su compra!! </title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .message-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    animation: scaleUp 0.5s forwards;
+  }
+  .message-container h1 {
+    color: #555;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+  }
+  .message-container p {
+    color: #555;
+    margin-top: 0;
+  }
+  button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  @keyframes scaleUp {
+    to {
+      transform: scale(1);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="message-container" id="messageBox">
+    <h1 id="mainMessage">Gracias por su compra!!</h1>
+    <p> Espero que te gusten mis prepizzas :].</p>
+    <!-- Botón para redirigir a la página de la foto -->
+    <button onclick="window.location.href='pagina-foto.html'">hace click aca para ganarte una prepizza de regalo!</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        document.getElementById('mainMessage').style.color = '#333';
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
